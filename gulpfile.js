@@ -1,23 +1,24 @@
-var gulp = require('gulp');
-var concat = require('gulp-concat');
-var uglify = require('gulp-uglify');
-var uglifycss = require('gulp-uglifycss');
+var elixir = require('laravel-elixir');
 
-gulp.task('uglify:js', function(){
-	return gulp.src('assets/js/*.js')
-		.pipe(concat('app.min.js'))
-		.pipe(uglify())
-		.pipe(gulp.dest('assets/js'));
-});
+/*
+ |--------------------------------------------------------------------------
+ | Elixir Asset Management
+ |--------------------------------------------------------------------------
+ |
+ | Elixir provides a clean, fluent API for defining some basic Gulp tasks
+ | for your Laravel application. By default, we are compiling the Sass
+ | file for our application, as well as publishing vendor resources.
+ |
+ */
 
-gulp.task('uglify:css', function(){
-	return gulp.src('assets/css/*.css')
-		.pipe(concat('style.min.css'))
-		.pipe(uglifycss())
-		.pipe(gulp.dest('assets/css'));
-});
+// elixir.config.css.autoprefix.options.browsers = ['last 2 versions'];
 
-gulp.task('uglify', ['uglify:js', 'uglify:css'], function(){
-	return gulp.src('src/index.html')
-		.pipe(gulp.dest('dist'));
+elixir((mix) => {
+    mix.sass('app.scss');
+
+    mix.scripts([
+        './node_modules/jquery/dist/jquery.js',
+        './node_modules/bootstrap-sass/assets/javascripts/bootstrap.js',
+        'app.js'
+    ], 'public/js/app.js');
 });
