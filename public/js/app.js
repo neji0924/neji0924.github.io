@@ -12630,4 +12630,7 @@ if (typeof jQuery === 'undefined') {
 
 }(jQuery);
 
+$(".activity #close").click(function() {
+	$(".box").removeClass('activity');
+});
 //# sourceMappingURL=app.js.map

@@ -14,7 +14,12 @@ var elixir = require('laravel-elixir');
 // elixir.config.css.autoprefix.options.browsers = ['last 2 versions'];
 
 elixir((mix) => {
+	mix.copy('./node_modules/font-awesome/fonts', 'public/fonts');
+	
     mix.sass('app.scss');
+    mix.sass('windows.scss', 'public/css/windows.css');
+    mix.sass('desktop.scss', 'public/css/desktop.css');
+
 
     mix.scripts([
         './node_modules/jquery/dist/jquery.js',
