@@ -15,12 +15,12 @@
 		<div class="desktop">
 			<ul>
 				<li>
-					<a class="computer" href="#">
+					<a class="computer" href="#" data-target="computer">
 						<span>我的電腦</span>
 					</a>
 				</li>
 				<li>
-					<a class="doc" href="#">
+					<a class="doc" href="#" data-target="doc">
 						<span>我的文件</span>
 					</a>
 				</li>
@@ -28,7 +28,7 @@
 		</div>
 	</div>
 
-	<div class="box activity">
+	<div class="box activity" id="computer">
 		<div class="tool">
 			<img src="../public/images/computer.png">
 			<span>我的電腦</span>
@@ -40,7 +40,25 @@
 					<a><i class="fa fa-window-maximize" aria-hidden="true"></i></a>
 				</li>
 				<li>
-					<a id="close" href="#">Ｘ</a>
+					<a class="close" href="#">Ｘ</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="box" id="doc">
+		<div class="tool">
+			<img src="../public/images/doc.png">
+			<span>我的文件</span>
+			<ul>
+				<li>
+					<a>&nbsp;ˍ&nbsp;&nbsp;</a>
+				</li>
+				<li>
+					<a><i class="fa fa-window-maximize" aria-hidden="true"></i></a>
+				</li>
+				<li>
+					<a class="close" href="#">Ｘ</a>
 				</li>
 			</ul>
 		</div>

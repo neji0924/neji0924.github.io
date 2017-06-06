@@ -1,6 +1,7 @@
 // border:#f00 solid;
 
 @import "node_modules/font-awesome/scss/font-awesome";
+@import "node_modules/compass-mixins/lib/compass/css3";
 
 $tool: #2257D6;
 $tool_gradient: #4077D6;
@@ -84,7 +85,8 @@ a {
 	border: $tool_gradient solid;
 	border-radius: 5px;
 	background-color: #fff;
-	opacity: 0;
+	display: none;
+    @include transition(opacity .3s);
 	.tool {
 		height: 30px;
 		background: radial-gradient(ellipse, $tool, $tool_gradient);
@@ -120,9 +122,6 @@ a {
 				}
 			}
 		}
-	}
-	&.activity {
-		opacity: 1;
 	}
 }
 

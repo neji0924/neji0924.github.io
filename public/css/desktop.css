@@ -3122,7 +3122,8 @@ a:link, a:visited, a:active, a:hover {
   border: #4077D6 solid;
   border-radius: 5px;
   background-color: #fff;
-  opacity: 0;
+  display: none;
+  transition: opacity 0.3s;
 }
 
 .box .tool {
@@ -3163,10 +3164,6 @@ a:link, a:visited, a:active, a:hover {
 
 .box .tool ul li:last-child a {
   background-color: #900;
-}
-
-.box.activity {
-  opacity: 1;
 }
 
 /*# sourceMappingURL=desktop.css.map */
