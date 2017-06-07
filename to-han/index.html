@@ -1,0 +1,204 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>github架站教學</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>給 翰倫的GitHub.io教學</section>
+				<section>
+					<section>
+						<h2>註冊</h2>
+						<p><a href="https://github.com">官方網站</a></p>
+					</section>
+					<section>
+						<img src="images/sign-up.png">
+					</section>
+					<section>
+						<img src="images/sign-up2.png">
+					</section>
+					<section>
+						<img src="images/sign-up3.png">
+					</section>
+					<section>
+						<h2>記得去信箱收認證信</h2>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>安裝</h2>
+						<p>MAC安裝我是找網路資源</p>
+						<p>可能有些問題</p>
+						<p>不過我相信你可以的</p>
+					</section>
+					<section>
+						<h2>使用brew 安裝</h2>
+                        <pre><code class="nohighlight" data-trim>
+$ brew install git
+                        </code></pre>
+                        <p>沒有brew的話要先安裝</p>
+					</section>
+					<section>
+						<h2>查看git版本</h2>
+                        <pre><code class="nohighlight" data-trim>
+$ git --version
+                        </code></pre>
+					</section>
+					<section>
+						<h2>git設定(僅需一次)</h2>
+                        <pre><code class="nohighlight" data-trim>
+$ git config --global user.name "Neji"
+$ git config --global user.email "neji0924@gmail.com"
+                        </code></pre>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>專案建立</h2>
+						<p>終於要開始了</p>
+					</section>
+					<section>
+						<img src="images/rep.png">
+					</section>
+					<section>
+						<img src="images/rep2.png">
+					</section>
+					<section>
+						<h2>為什麼儲存庫名稱要規定</h2>
+						<p>這是github提供的一個架站位置</p>
+						<p>他只讀取 [帳號].github.io 這個rep</p>
+						<p>其他名稱的話只會是一般的rep</p>
+					</section>
+					<section>
+						<h2>有很多網站想架在這怎麼辦?</h2>
+						<p>你可以在這專案下各種開目錄</p>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>上傳專案</h2>
+						<p>首先是 cd 到你的資料夾裡面</p>
+					</section>
+					<section>
+						<h2>建立README.md</h2>
+						<pre><code class="nohighlight" data-trim>
+$ echo "# My Proj" >> README.md
+                        </code></pre>
+                        <p>md檔是一個叫markdown的語言</p>
+                        <p>為了快速寫文檔而產生的 類似html</p>
+                        <p>先跳過他</p>
+                        <p>如果再github上建立專案有順便建立README這步驟就跳過</p>
+					</section>
+					<section>
+						<h2>加入git</h2>
+						<pre><code class="nohighlight" data-trim>
+$ git init
+$ git add .
+$ git status
+$ git commit -m "訊息"
+                        </code></pre>
+                        <p>init 就是這個專案加入git</p>
+                        <p>add . 把你要推出去的檔案add起來 (. 就是全部)</p>
+                        <p>add . 可能會有錯誤訊息就再打一次</p>
+                        <p>使用status查看 綠色的就是已經被加入要推出去的地方</p>
+                        <p>commit 就是存檔的意思</p>
+					</section>
+					<section>
+						<h2>告訴git你要推到哪裡</h2>
+						<pre><code class="nohighlight" data-trim>
+$ git remote add origin [url]
+$ git push origin master
+                        </code></pre>
+                        <p>url在這看</p>
+                        <img src="images/rep3.png">
+					</section>
+					<section>
+						<h2>網址為 [帳號].github.io</h2>
+						<p>第一次上傳可能要等一下才有</p>
+						<p>他會讀取index.html所以記得要有這隻檔案</p>
+						<p>想更改網址可以購買網域</p>
+						<p>在專案目錄下加入CNAME 這隻檔案</p>
+						<p>在專案目錄下加入CNAME 這隻檔案</p>
+					</section>
+					<section>
+						<h2>後話</h2>
+						<p>想更改網址可以購買網域</p>
+						<p>在專案目錄下加入CNAME 這隻檔案</p>
+						<p>把網域貼進去就可以了</p>
+						<p>不用副檔名</p>
+						<p>記得上傳上去</p>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>專案更新</h2>
+					</section>
+					<section>
+						<pre><code class="nohighlight" data-trim>
+$ git status
+$ git add .
+$ git status
+$ git commit -m "訊息"
+$ git push origin master
+                        </code></pre>
+                        <p>status 可以查看那些檔案有改動(紅色)</p>
+                        <p>add 檔案後 再用status看(綠色)</p>
+					</section>
+					<section>
+						<h2>專案下載</h2>
+						<pre><code class="nohighlight" data-trim>
+$ git clone [url]
+                        </code></pre>
+                        <p>到新的電腦要下載專案的話</p>
+					</section>
+					<section>
+						<h2>專案更新</h2>
+						<pre><code class="nohighlight" data-trim>
+$ git pull
+                        </code></pre>
+                        <p>曾經下載過 但不是最新版本的話就要更新</p>
+                        <p>例如在公司上傳了 回到家要記得先pull</p>
+                        <p>很重要!!!!</p>
+					</section>
+				</section>
+				<section>
+					<section>
+						END.
+					</section>
+				</section>
+
+
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
