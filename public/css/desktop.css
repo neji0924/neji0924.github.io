@@ -3095,6 +3095,7 @@ a:link, a:visited, a:active, a:hover {
   background-color: transparent;
   background-repeat: no-repeat;
   text-align: center;
+  text-shadow: 1px 1px 1px #000;
 }
 
 #desktop .desktop > div:hover {
@@ -3260,19 +3261,11 @@ a:link, a:visited, a:active, a:hover {
 .box .content {
   height: calc(100% - (25px + 30px + 50px + 25px + 5px));
   bottom: 0;
-}
-
-.box .content ul {
-  padding: 0;
-}
-
-.box .content ul li {
-  list-style: none;
+  width: 100%;
   text-align: center;
-  float: left;
 }
 
-.box .content ul li a {
+.box .content a {
   display: block;
   margin: 10px;
   padding: 40px 0 10px 0;
@@ -3281,9 +3274,10 @@ a:link, a:visited, a:active, a:hover {
   background-color: transparent;
   background-repeat: no-repeat;
   color: #000;
+  float: left;
 }
 
-.box .content ul li .image {
+.box .content .image {
   background-image: url("../images/img.png");
 }
 

@@ -10,13 +10,13 @@ $(".close").click(function() {
 	$(this).parents(".box").hide(100);
 });
 
-$(".desktop > div").dblclick(function() {
+$(".desktop .computer, .desktop .doc").dblclick(function() {
 	$("#" + $(this).data('target')).show(100);
 });
 
 $(".desktop > div, .box").draggable();
 $(".content a").draggable({
-	                containment: ".content",
+	                containment: "parent",
 	                scroll: false
 	        	});
 
