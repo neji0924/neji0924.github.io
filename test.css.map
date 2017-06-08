@@ -1,1 +1,0 @@
-{"version":3,"sources":["test.scss"],"names":[],"mappings":"AAAA;EACC,YAAY;CAIZ;;AALD;EAGE,YAAY;CACZ","file":"test.css","sourcesContent":["p {\r\n\tcolor: #f00;\r\n\t&:hover {\r\n\t\tcolor: #00f;\r\n\t}\r\n}"]}
