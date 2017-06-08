@@ -10,11 +10,11 @@ $(".close").click(function() {
 	$(this).parents(".box").hide(100);
 });
 
-$(".desktop a").dblclick(function() {
+$(".desktop > div").dblclick(function() {
 	$("#" + $(this).data('target')).show(100);
 });
 
-$(".desktop a, .box").draggable();
+$(".desktop > div, .box").draggable();
 $(".content a").draggable({
 	                containment: ".content",
 	                scroll: false

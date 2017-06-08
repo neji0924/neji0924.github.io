@@ -49,43 +49,29 @@ a {
 	}
 
 	.desktop {
-		ul {
-			padding: 0;
-			li {
-				list-style: none;
-				text-align: center;
-				a {
-					display: block;
-				    margin: 10px;
-				    padding: 40px 0 10px 0;
-				    width: 100px;
-				    background-position: 50% 5px;
-				    background-color: transparent;
-				    background-repeat: no-repeat;
-				}
-				.computer {
-					background-image: url('../images/computer.png');
-				}
-				.doc {
-					background-image: url('../images/doc.png');
-				}
-				.chrome {
-					display: block;
-				    margin: 10px;
-				    padding: 40px 0 10px 0;
-				    width: 100px;
-				    background-position: 50% 5px;
-				    background-color: transparent;
-				    background-repeat: no-repeat;
-					background-image: url('../images/Chrome.png');
-					background-size: 30px;
-					&:hover {
-						cursor: pointer;
-					}
-				}
+		> div {
+			display: block;
+		    margin: 10px;
+		    padding: 40px 0 10px 0;
+		    width: 100px;
+		    background-position: 50% 5px;
+		    background-color: transparent;
+		    background-repeat: no-repeat;
+		    text-align: center;
+			&:hover {
+				cursor: pointer;
+			}
+			&.computer {
+				background-image: url('../images/computer.png');
+			}
+			&.doc {
+				background-image: url('../images/doc.png');
+			}
+			&.chrome {
+				background-image: url('../images/Chrome.png');
+				background-size: 30px;
 			}
 		}
-
 	}
 }
 
@@ -212,7 +198,7 @@ a {
 		}
 		input {
 			display: inline;
-			width: calc(95% - 20px);
+			width: calc(80% - 20px);
 		}
 	}
 

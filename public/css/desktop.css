@@ -3086,47 +3086,32 @@ a:link, a:visited, a:active, a:hover {
   width: 30px;
 }
 
-#desktop .desktop ul {
-  padding: 0;
-}
-
-#desktop .desktop ul li {
-  list-style: none;
+#desktop .desktop > div {
+  display: block;
+  margin: 10px;
+  padding: 40px 0 10px 0;
+  width: 100px;
+  background-position: 50% 5px;
+  background-color: transparent;
+  background-repeat: no-repeat;
   text-align: center;
 }
 
-#desktop .desktop ul li a {
-  display: block;
-  margin: 10px;
-  padding: 40px 0 10px 0;
-  width: 100px;
-  background-position: 50% 5px;
-  background-color: transparent;
-  background-repeat: no-repeat;
+#desktop .desktop > div:hover {
+  cursor: pointer;
 }
 
-#desktop .desktop ul li .computer {
+#desktop .desktop > div.computer {
   background-image: url("../images/computer.png");
 }
 
-#desktop .desktop ul li .doc {
+#desktop .desktop > div.doc {
   background-image: url("../images/doc.png");
 }
 
-#desktop .desktop ul li .chrome {
-  display: block;
-  margin: 10px;
-  padding: 40px 0 10px 0;
-  width: 100px;
-  background-position: 50% 5px;
-  background-color: transparent;
-  background-repeat: no-repeat;
+#desktop .desktop > div.chrome {
   background-image: url("../images/Chrome.png");
   background-size: 30px;
-}
-
-#desktop .desktop ul li .chrome:hover {
-  cursor: pointer;
 }
 
 .box {
@@ -3269,7 +3254,7 @@ a:link, a:visited, a:active, a:hover {
 
 .box .url input {
   display: inline;
-  width: calc(95% - 20px);
+  width: calc(80% - 20px);
 }
 
 .box .content {
