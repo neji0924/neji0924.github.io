@@ -1,0 +1,185 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>npm教學</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css">
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<section><h1>npm教學</h1></section>
+					<section>
+						<h2>npm是什麼</h2>
+						<p>npm為node.js的套件管理工具</p>
+						<p>node.js在0.6.3後內建npm</p>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h1>安裝</h1>
+						<p>直接安裝node.js</p>
+					</section>
+					<section>
+						<h2>windows</h2>
+						<a href="https://nodejs.org/en/download/" target="_blank">Download | Node.js</a>
+					</section>
+					<section>
+						<h2>MAC</h2>
+                        <pre><code class="nohighlight" data-trim>$ brew install node</code></pre>
+					</section>
+					<section>
+						<h2>測試一下是否可以執行</h2>
+						<pre><code class="nohighlight" data-trim>$ npm -v</code></pre>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h1>指令教學</h1>
+					</section>
+					<section>
+						<h2>全域安裝</h2>
+                        <pre><code class="nohighlight" data-trim>$ npm install -g {package name}</code></pre>
+					</section>
+					<section>
+						<h2>專案安裝</h2>
+                        <pre><code class="nohighlight" data-trim>$ npm install {package name}</code></pre>
+						<p>記得先cd到專案目錄下</p>
+					</section>
+					<section>
+						<h2>移除套件</h2>
+						<pre><code class="nohighlight" data-trim>
+$ npm uninstall -g {package name} //全域
+$ npm uninstall {package name} //專案套件
+						</code></pre>
+					</section>
+					<section>
+						<h2>列出套件</h2>
+						<pre><code class="nohighlight" data-trim>
+$ npm list -g  //全域
+$ npm list     //專案套件
+						</code></pre>
+						<p>還有很多指令</p>
+						<p>要用到的時候在查即可</p>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h1>package.json</h1>
+						<p>好用的來了喔</p>
+					</section>
+					<section>
+						<h2>建立</h2>
+						<pre><code class="nohighlight" data-trim>$ npm init</code></pre>
+						<p>Enter大法後就會產出package.json</p>
+					</section>
+					<section>
+						<h2>內容物</h2>
+						<pre><code class="nohighlight">
+{
+  "name": "test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
+						</code></pre>
+					</section>
+					<section>
+						<h2>簡介</h2>
+						<p>dependencies: 上線會用到的套件</p>
+						<p>devDependencies: 開發會用到的套件</p>
+						<p>其他都不重要</p>
+					</section>
+					<section>
+						<h2>先複製貼上這個範例</h2>
+						<pre><code class="nohighlight" data-trim>
+{
+  "private": true,
+  "scripts": {
+    "prod": "gulp --production",
+    "dev": "gulp watch"
+  },
+  "devDependencies": {
+    "bootstrap-sass": "^3.3.7",
+    "gulp": "^3.9.1",
+    "jquery": "^3.1.0",
+    "jquery-ui-dist": "^1.12.1",
+    "laravel-elixir": "^6.0.0-14",
+    "laravel-elixir-vue-2": "^0.2.0",
+    "laravel-elixir-webpack-official": "^1.0.2",
+    "font-awesome": "^4.7.0",
+    "compass-mixins": "^0.12.10"
+  }
+}
+
+						</code></pre>
+					</section>
+					<section>
+						<h2>如何安裝套件</h2>
+						<pre><code class="nohighlight" data-trim>$ npm install</code></pre>
+					</section>
+					<section>
+						<h2>如何只安裝開發套件</h2>
+						<pre><code class="nohighlight" data-trim>$ npm install --only=production</code></pre>
+						<p>範例中只有devDependencies下哪個指令都可以</p>
+					</section>
+					<section>
+						<h2>套件資料夾</h2>
+						<pre><code class="nohighlight" data-trim>node_modules</code></pre>
+						<p>有使用git記得忽略掉這個資料夾</p>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>安裝套件方式</h2>
+						<pre><code class="nohighlight" data-trim>在package.json下增加要安裝的套件後下install</code></pre>
+						<pre><code class="nohighlight" data-trim>$ npm install {package name} --save</code></pre>
+						<pre><code class="nohighlight" data-trim>$ npm install {package name} --save-dev</code></pre>
+						<p>-dev就不多說了</p>
+						<p>--save沒加不會將資訊存在package.json裡面</p>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						END.
+					</section>
+				</section>
+
+
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
