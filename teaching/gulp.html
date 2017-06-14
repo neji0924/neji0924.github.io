@@ -1,0 +1,232 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>gulp教學</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css">
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<section><h1>gulp教學</h1></section>
+					<section>
+						<h2>gulp是什麼</h2>
+						<p>gulp是運行在node.js上的一套js</p>
+						<p>專門自動化處理前端的雜事</p>
+					</section>
+					<section>
+						<h2>主要做哪些雜事?</h2>
+						<ul>
+							<li>壓縮</li>
+							<li>合併</li>
+						</ul>
+						<p>包含圖片、html、js、css、文件</p>
+						<p>還有許多功能可自行上網搜尋</p>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h1>安裝</h1>
+						<p>全域安裝gulp</p>
+						<pre><code class="nohighlight" data-trim>$ npm install -g gulp</code></pre>
+					</section>
+					<section>
+						<h2>測試一下是否可以執行</h2>
+						<pre><code class="nohighlight" data-trim>$ gulp -v</code></pre>
+					</section>
+					<section>
+						<h2>gulpfile.js</h2>
+						<p>要執行gulp必須在專案根目錄下建立這隻檔案</p>
+						<p>裡面寫你想要執行的task</p>
+						<p>此篇教學略過</p>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h1>Laravel-elixir</h1>
+						<p>不會寫task怎麼辦</p>
+						<p>Laravel-elixir來拯救你</p>
+						<p>要開始實做了喔</p>
+					</section>
+					<section>
+						<h2>建立專案</h2>
+                        <p>首先建立一個練習gulp的資料夾</p>
+                        <p>並建立npm 的package.json (提示:init)</p>
+                        <img src="./images/gulp-1.jpg" alt="gulp教學">
+					</section>
+					<section>
+						<h2>package.json</h2>
+                        <pre><code class="nohighlight" data-trim>
+{
+  "devDependencies": {
+    "bootstrap-sass": "^3.3.7",
+    "gulp": "^3.9.1",
+    "jquery": "^3.1.0",
+    "jquery-ui-dist": "^1.12.1",
+    "laravel-elixir": "^6.0.0-14",
+    "laravel-elixir-vue-2": "^0.2.0",
+    "laravel-elixir-webpack-official": "^1.0.2",
+    "font-awesome": "*",
+    "compass-mixins": "^0.12.10"
+  }
+}
+                        </code></pre>
+						<p>先複製貼上這個package.json (本次教學用到的套件)</p>
+						
+					</section>
+					<section>
+						<h2>安裝</h2>
+						<pre><code class="nohighlight" data-trim>$ npm install</code></pre>
+						<p>會多node_modules資料夾</p>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h1>gulpfile.js</h1>
+						<p>此篇說明gulpfile.js</p>
+					</section>
+					<section>
+						<h2>先建立gulpfile.js</h2>
+						<pre><code class="nohighlight" data-trim>
+var elixir = require('laravel-elixir');
+
+elixir((mix) => {
+    mix.copy('./node_modules/font-awesome/fonts', 'public/fonts');
+  
+    mix.sass('app.scss');
+
+    mix.scripts([
+        './node_modules/jquery/dist/jquery.min.js',
+        './node_modules/jquery-ui-dist/jquery-ui.min.js',
+        './node_modules/bootstrap-sass/assets/javascripts/bootstrap.js',
+        'app.js'
+    ], 'public/js/app.js');
+});
+						</code></pre>
+						<p>複製貼上此範例</p>
+					</section>
+					<section>
+						<h2>簡介</h2>
+						<img src="./images/gulp-2.jpg" alt="gulp教學">
+					</section>
+					<section>
+						<h2>建立資料夾</h2>
+						<p>resources/assets/sass/app.scss</p>
+						<p>resources/assets/js/app.js</p>
+						<p>此為laravel-elixir架構</p>
+					</section>
+					<section>
+						<h2>不想要laravel的架構?</h2>
+						<p>在gulpfile.js說明檔案路徑</p>
+						<pre><code class="nohighlight" data-trim>mix.sass('./app.scss', './app.css');</code></pre>
+						<p>直接將專案根目錄的scss編譯成css</p>
+						<p>可自行玩看看不過還是建議遵循結構</p>
+					</section>
+					<section>
+						<h2>多檔案</h2>
+						<p>有兩隻scss怎麼辦呢</p>
+						<p>編譯成兩隻css</p>
+						<pre><code class="nohighlight" data-trim>
+mix.sass('app.scss');
+mix.sass('app2.scss');
+						</code></pre>
+						<p>編譯成一隻css</p>
+						<pre><code class="nohighlight" data-trim>
+mix.sass(['app.scss', 'app2.scss']);
+						</code></pre>
+					</section>
+					<section>
+						<h2>那每次增加檔案都要再去修改gulpfile?</h2>
+						<p>匹配符號來囉</p>
+						<pre><code class="nohighlight" data-trim>
+mix.sass('*.scss')  // 所有scss
+mix.sass('./resources/assets/sass/**/*.scss') //若你的scss有依照專案分資料夾
+mix.sass('!aaaa.scss')	// 除了 aaaa.scss以外
+mix.sass('{aaa,bbb}.scss') // 有在這裏面的
+						</code></pre>
+						<p>大概知道一下就好有需要的時候在來翻</p>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h1>gulp執行</h1>
+						<p>終於要開始了</p>
+					</section>
+					<section>
+						<h2>目前專案目錄</h2>
+						<img src="./images/gulp-3.jpg" alt="gulp教學">
+					</section>
+					<section>
+						<h2>開發時</h2>
+						<p>寫好需要執行一次任務</p>
+						<pre><code class="nohighlight" data-trim>$ gulp</code></pre>
+						<p>每次存檔都會執行任務</p>
+						<pre><code class="nohighlight" data-trim>$ gulp watch</code></pre>
+					</section>
+					<section>
+						<h2>目前專案目錄</h2>
+						<img src="./images/gulp-4.jpg" alt="gulp教學">
+						<p>多了一個public資料夾</p>
+						<p>你的成果都在裡面了</p>
+						<p>html裡面也是匯入public的東西</p>
+					</section>
+					<section>
+						<h2>專案上線前</h2>
+						<pre><code class="nohighlight" data-trim>$ gulp --production</code></pre>
+						<p>你的public裡面的東西都被壓縮了</p>
+					</section>
+					<section>
+						<h2>享受gulp帶給你的便利吧!!</h2>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h1>套件匯入示範</h1>
+					</section>
+					<section>
+						<h2>scss</h2>
+						<pre><code class="nohighlight" data-trim>
+@import "node_modules/font-awesome/scss/font-awesome";
+@import "node_modules/compass-mixins/lib/compass/css3";
+						</code></pre>
+						<p>在scss打完這兩行後執行gulp看看css</p>
+						<p>匯入compass/css3 後可以使用compass的function</p>
+						<p>試試看匯入bootstrap吧</p>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						END.
+					</section>
+				</section>
+
+
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
