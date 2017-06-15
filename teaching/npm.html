@@ -82,9 +82,11 @@ $ npm list     //專案套件
 						<p>cd至專案跟目錄</p>
 						<pre><code class="nohighlight" data-trim>$ npm init</code></pre>
 						<p>Enter大法後就會產出package.json</p>
+						<p>有點類似安裝的時候下一步下一步下一步</p>
 					</section>
 					<section>
-						<h2>package.json開啟後(用sublime開啟即可)</h2>
+						<h2>package.json樣貌</h2>
+						<p>(用sublime開啟即可)</p>
 						<pre><code class="nohighlight">
 {
   "name": "test",
@@ -108,31 +110,7 @@ $ npm list     //專案套件
 						<p>其他都不重要</p>
 					</section>
 					<section>
-						<h2>先複製這個範例到package.json</h2>
-						<pre><code class="nohighlight" data-trim>
-{
-  "private": true,
-  "scripts": {
-    "prod": "gulp --production",
-    "dev": "gulp watch"
-  },
-  "devDependencies": {
-    "bootstrap-sass": "^3.3.7",
-    "gulp": "^3.9.1",
-    "jquery": "^3.1.0",
-    "jquery-ui-dist": "^1.12.1",
-    "laravel-elixir": "^6.0.0-14",
-    "laravel-elixir-vue-2": "^0.2.0",
-    "laravel-elixir-webpack-official": "^1.0.2",
-    "font-awesome": "^4.7.0",
-    "compass-mixins": "^0.12.10"
-  }
-}
-
-						</code></pre>
-					</section>
-					<section>
-						<h2>如何安裝套件</h2>
+						<h2>如何安裝package.json裡面的套件</h2>
 						<pre><code class="nohighlight" data-trim>$ npm install</code></pre>
 					</section>
 					<section>
@@ -144,22 +122,32 @@ $ npm list     //專案套件
 						<h2>套件資料夾</h2>
 						<pre><code class="nohighlight" data-trim>node_modules</code></pre>
 						<p>有使用git記得忽略掉這個資料夾</p>
+						<p>或是要包成zip給人的時候也是</p>
+						<p>拿到package.json就等於拿到要使用的套件了</p>
 					</section>
 				</section>
 
 				<section>
 					<section>
+						<h2>尋找套件</h2>
+						<a href="https://www.npmjs.com/" target="_blank">here</a>
+					</section>
+					<section>
 						<h2>安裝套件方式</h2>
-						<pre><code class="nohighlight" data-trim>在package.json下增加要安裝的套件後下install</code></pre>
+						<p>下指令安裝後把安裝的套件記錄在json裡</p>
 						<pre><code class="nohighlight" data-trim>$ npm install {package name} --save</code></pre>
 						<pre><code class="nohighlight" data-trim>$ npm install {package name} --save-dev</code></pre>
 						<p>-dev就不多說了</p>
 						<p>--save沒加不會將資訊存在package.json裡面</p>
 					</section>
 					<section>
-						<h2>尋找套件</h2>
-						<a href="https://www.npmjs.com/" target="_blank">here</a>
+						<h2>練習npm</h2>
+						<p>找你曾經使用過的套件來安裝</p>
+						<p>並查看一下node_modules資料夾底下的變化</p>
+						<p>接著看看package.json的變化</p>
+						<p>務必熟悉好用的套件管理工具 npm !</p>
 					</section>
+					
 				</section>
 
 				<section>
