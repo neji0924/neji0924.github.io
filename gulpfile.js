@@ -14,7 +14,8 @@ var elixir = require('laravel-elixir');
 // elixir.config.css.autoprefix.options.browsers = ['last 2 versions'];
 
 elixir((mix) => {
-	mix.copy('./node_modules/font-awesome/fonts', 'public/fonts');
+    mix.copy('./node_modules/font-awesome/fonts', 'public/fonts');
+	mix.copy('./node_modules/bootstrap-sass/assets/fonts/bootstrap', 'public/fonts/bootstrap');
 	
     mix.sass('app.scss');
     mix.sass('windows.scss');
@@ -31,4 +32,5 @@ elixir((mix) => {
 
     mix.copy('./public/js/app.js', './practice/js/app.js');
     mix.copy('./node_modules/font-awesome/fonts', './practice/fonts');
+    mix.copy('./node_modules/bootstrap-sass/assets/fonts/bootstrap', './practice/fonts/bootstrap');
 });
