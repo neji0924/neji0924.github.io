@@ -2433,4 +2433,23 @@ $(".desktop .chrome").dblclick(function() {
 });
 
 
+//banner
+
+$("#my-banner a").css({
+	"height": $("#my-banner .banner img").css("height")
+});
+
+$("#my-banner .next").click(function() {
+	var $temp = $("#my-banner > .banner > div").eq(0).clone(true);
+	$("#my-banner > .banner").append($temp);
+	$("#my-banner > .banner > div").eq(0).remove();
+});
+
+$("#my-banner .prev").click(function() {
+	var $temp = $("#my-banner > .banner > div").last().clone(true);
+	$("#my-banner > .banner").prepend($temp);
+	$("#my-banner > .banner > div").last().remove();
+});
+
+
 //# sourceMappingURL=app.js.map

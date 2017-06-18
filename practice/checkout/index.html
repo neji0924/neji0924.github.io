@@ -6,108 +6,105 @@
 	<link rel="stylesheet" type="text/css" href="../css/practice.css">
 </head>
 <body>
-<div class="container">
-    <div class="row">
-    	<section>
-        <div class="wizard">
-            <div class="wizard-inner">
-                <div class="connecting-line"></div>
-                <ul class="nav nav-tabs" role="tablist">
+<div class="container" id="checkout">
+    <div class="row wizard">
 
-                    <li role="presentation" class="active">
-                        <a href="#step1" data-toggle="tab" aria-controls="step1" role="tab" title="Step 1">
-                            <span class="round-tab">
-                                <i class="fa fa-user-o" aria-hidden="true"></i>
-                            </span>
-                        </a>
-                    </li>
+        <div class="wizard-inner">
+            <div class="connecting-line"></div>
+            <ul class="nav nav-tabs" role="tablist">
 
-                    <li role="presentation" class="disabled">
-                        <a href="#step2" data-toggle="tab" aria-controls="step2" role="tab" title="Step 2">
-                            <span class="round-tab">
-                                <i class="fa fa-credit-card" aria-hidden="true"></i>
-                            </span>
-                        </a>
-                    </li>
-                    <li role="presentation" class="disabled">
-                        <a href="#step3" data-toggle="tab" aria-controls="step3" role="tab" title="Step 3">
-                            <span class="round-tab">
-                                <i class="fa fa-truck" aria-hidden="true"></i>
-                            </span>
-                        </a>
-                    </li>
+                <li role="presentation" class="active">
+                    <a href="#step1" data-toggle="tab" aria-controls="step1" role="tab" title="Step 1">
+                        <span class="round-tab">
+                            <i class="fa fa-user-o" aria-hidden="true"></i>
+                        </span>
+                    </a>
+                </li>
 
-                    <li role="presentation" class="disabled">
-                        <a href="#complete" data-toggle="tab" aria-controls="complete" role="tab" title="Complete">
-                            <span class="round-tab">
-                                <i class="fa fa-check-square-o" aria-hidden="true"></i>
-                            </span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
+                <li role="presentation" class="disabled">
+                    <a href="#step2" data-toggle="tab" aria-controls="step2" role="tab" title="Step 2">
+                        <span class="round-tab">
+                            <i class="fa fa-credit-card" aria-hidden="true"></i>
+                        </span>
+                    </a>
+                </li>
+                <li role="presentation" class="disabled">
+                    <a href="#step3" data-toggle="tab" aria-controls="step3" role="tab" title="Step 3">
+                        <span class="round-tab">
+                            <i class="fa fa-truck" aria-hidden="true"></i>
+                        </span>
+                    </a>
+                </li>
 
-            <form role="form">
-                <div class="tab-content">
-                    <div class="tab-pane active" role="tabpanel" id="step1">
-                        <div class="step1">
-							<div class="form-group">
-							    <label for="name">收件者</label>
-							    <input type="name" class="form-control" id="name" placeholder="輸入姓名">
-							</div>
-                        </div>
-                        <ul class="list-inline pull-right">
-                            <li><button type="button" class="btn btn-primary next-step">下一步</button></li>
-                        </ul>
-                    </div>
-                    <div class="tab-pane" role="tabpanel" id="step2">
-                        <div class="step2">
-							<div class="form-group">
-							    <label for="payment">請選擇付款方式</label>
-							    <label class="radio-inline">
-								    <input type="radio" name="payment" value="atm"> ATM
-								</label>
-								<label class="radio-inline">
-								    <input type="radio" name="payment" value="ubg"> 超取
-								</label>
-								<label class="radio-inline">
-								    <input type="radio" name="payment" value="pod"> 貨到付款
-								</label>
-							</div>
-                        </div>
-                        <ul class="list-inline pull-right">
-                            <li><button type="button" class="btn btn-default prev-step">上一步</button></li>
-                            <li><button type="button" class="btn btn-primary next-step">下一步</button></li>
-                        </ul>
-                    </div>
-                    <div class="tab-pane" role="tabpanel" id="step3">
-                        <div class="form-group">
-							    <label for="payment">請選擇配送方式</label>
-							    <label class="radio-inline">
-								    <input type="radio" name="shipment" value="deliver"> 宅配
-								</label>
-								<label class="radio-inline">
-								    <input type="radio" name="shipment" value="ubg"> 超取
-								</label>
-							</div>
-                        <ul class="list-inline pull-right">
-                            <li><button type="button" class="btn btn-default prev-step">上一步</button></li>
-                            <li><button type="button" class="btn btn-primary btn-info-full next-step">下一步</button></li>
-                        </ul>
-                    </div>
-                    <div class="tab-pane" role="tabpanel" id="complete">
-                    	<h1>完成</h1>
-                        <ul class="list-inline pull-right">
-                            <li><button type="button" class="btn btn-default prev-step">上一步</button></li>
-                            <li><button type="button" class="btn btn-primary btn-info-full next-step">送出</button></li>
-                        </ul>
-                    </div>
-                    <div class="clearfix"></div>
-                </div>
-            </form>
+                <li role="presentation" class="disabled">
+                    <a href="#complete" data-toggle="tab" aria-controls="complete" role="tab" title="Complete">
+                        <span class="round-tab">
+                            <i class="fa fa-check-square-o" aria-hidden="true"></i>
+                        </span>
+                    </a>
+                </li>
+            </ul>
         </div>
-    </section>
-   </div>
+
+        <form role="form">
+            <div class="tab-content">
+                <div class="tab-pane active" role="tabpanel" id="step1">
+                    <div class="step1">
+						<div class="form-group">
+						    <label for="name">收件者</label>
+						    <input type="name" class="form-control" id="name" placeholder="輸入姓名">
+						</div>
+                    </div>
+                    <ul class="list-inline pull-right">
+                        <li><button type="button" class="btn btn-primary next-step">下一步</button></li>
+                    </ul>
+                </div>
+                <div class="tab-pane" role="tabpanel" id="step2">
+                    <div class="step2">
+						<div class="form-group">
+						    <label for="payment">請選擇付款方式</label>
+						    <label class="radio-inline">
+							    <input type="radio" name="payment" value="atm"> ATM
+							</label>
+							<label class="radio-inline">
+							    <input type="radio" name="payment" value="ubg"> 超取
+							</label>
+							<label class="radio-inline">
+							    <input type="radio" name="payment" value="pod"> 貨到付款
+							</label>
+						</div>
+                    </div>
+                    <ul class="list-inline pull-right">
+                        <li><button type="button" class="btn btn-default prev-step">上一步</button></li>
+                        <li><button type="button" class="btn btn-primary next-step">下一步</button></li>
+                    </ul>
+                </div>
+                <div class="tab-pane" role="tabpanel" id="step3">
+                    <div class="form-group">
+						    <label for="payment">請選擇配送方式</label>
+						    <label class="radio-inline">
+							    <input type="radio" name="shipment" value="deliver"> 宅配
+							</label>
+							<label class="radio-inline">
+							    <input type="radio" name="shipment" value="ubg"> 超取
+							</label>
+						</div>
+                    <ul class="list-inline pull-right">
+                        <li><button type="button" class="btn btn-default prev-step">上一步</button></li>
+                        <li><button type="button" class="btn btn-primary btn-info-full next-step">下一步</button></li>
+                    </ul>
+                </div>
+                <div class="tab-pane" role="tabpanel" id="complete">
+                	<h1>完成</h1>
+                    <ul class="list-inline pull-right">
+                        <li><button type="button" class="btn btn-default prev-step">上一步</button></li>
+                        <li><button type="button" class="btn btn-primary btn-info-full next-step">送出</button></li>
+                    </ul>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </form>
+    </div>
 </div>
 
 <script src="../js/app.js"></script>
