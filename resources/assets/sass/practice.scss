@@ -193,6 +193,17 @@
             vertical-align: middle;
         }
     }
+}
 
+#dropdown-css {
+    .dropdown-css-content {
+        @include transition(opacity .4s);
+        opacity: 0;
+    }
 
+    .dropdown-css:focus {
+        &+.dropdown-css-content {
+            opacity: 1;
+        }
+    }
 }

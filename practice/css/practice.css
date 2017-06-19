@@ -10902,4 +10902,13 @@ button.close {
   vertical-align: middle;
 }
 
+#dropdown-css .dropdown-css-content {
+  transition: opacity 0.4s;
+  opacity: 0;
+}
+
+#dropdown-css .dropdown-css:focus + .dropdown-css-content {
+  opacity: 1;
+}
+
 /*# sourceMappingURL=practice.css.map */

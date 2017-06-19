@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>dropdown</title>
+
+	<link rel="stylesheet" type="text/css" href="../css/practice.css">
+</head>
+<body>
+	<div class="dropdown">
+		<button id="dLabel" type="button" data-toggle="dropdown" aria-haspopup="true" role="button" aria-expanded="false">
+			bootstrap	
+		</button>
+		<ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+			<li>11111</li>
+			<li>22222</li>
+			<li>33333</li>
+		</ul>
+	</div>
+
+	<div>
+		<button class="dropdown-js">dropdown-js</button>
+		<div class="dropdown-js-content">
+			<ul>
+				<li>11111</li>
+				<li>22222</li>
+				<li>33333</li>
+			</ul>
+		</div>
+	</div>
+
+	<div id="dropdown-css">
+		<button class="dropdown-css">dropdown-css</button>
+		<div class="dropdown-css-content">
+			<ul>
+				<li>11111</li>
+				<li>22222</li>
+				<li>33333</li>
+			</ul>
+		</div>
+	</div>
+scss
+<pre><code>
+.dropdown-css-content {
+    @include transition(opacity .4s);
+    opacity: 0;
+}
+
+.dropdown-css:focus {
+    &+.dropdown-css-content {
+        opacity: 1;
+    }
+}
+</code></pre>
+	<script src="../js/app.js"></script>
+	<script type="text/javascript">
+		$(".dropdown-toggle").dropdown();
+		$(".dropdown-js-content").hide();
+		$(".dropdown-js").click(function() {
+			$(".dropdown-js-content").toggle(400);
+		});
+	</script>
+</body>
+</html>
