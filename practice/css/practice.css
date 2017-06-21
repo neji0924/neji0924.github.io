@@ -10911,4 +10911,15 @@ button.close {
   opacity: 1;
 }
 
+#loading button {
+  display: block;
+  margin: 50px auto;
+}
+
+#loading .loading {
+  position: absolute;
+  left: calc(50% - 32px);
+  top: calc(50% - 32px);
+}
+
 /*# sourceMappingURL=practice.css.map */

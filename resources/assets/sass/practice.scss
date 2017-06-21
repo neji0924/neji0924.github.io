@@ -207,3 +207,16 @@
         }
     }
 }
+
+#loading {
+    button {
+        display: block;
+        margin: 50px auto;
+    }
+
+    .loading {
+        position: absolute;
+        left: calc(50% - 32px);
+        top: calc(50% - 32px);
+    }
+}

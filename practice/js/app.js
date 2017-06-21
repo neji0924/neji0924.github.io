@@ -2451,5 +2451,12 @@ $("#my-banner .prev").click(function() {
 	$("#my-banner > .banner > div").last().remove();
 });
 
+//loading
+
+$("#loading .loading").hide();
+$("#loading button").click(function() {
+	$("#loading .loading").show();
+	setTimeout(function() {$("#loading .loading").hide(); }, 2000)
+});
 
 //# sourceMappingURL=app.js.map
