@@ -1,0 +1,168 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>scss</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css">
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<section><h1>scss教學</h1></section>
+					<section>
+						<h2>scss是什麼</h2>
+						<p>css的進階版</p>
+						<p>增加了運算、變數、巢狀、繼承、函式等功能</p>
+					</section>
+					<section>
+						<h2>為什麼要使用scss</h2>
+						<ul>
+							<li>易於閱讀</li>
+							<li>易於維護</li>
+							<li>開發快速</li>
+							<li>程式碼重用</li>
+						</ul>
+					</section>
+					<section>
+						<h2>不使用會有什麼風險</h2>
+						<p>直接在編譯出來的css上做修改</p>
+						<p>之後若有人重新編譯scss</p>
+						<p>css上的修改會完全消失</p>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h1>巢狀</h1>
+						<p>極為重要的功能</p>
+						<p>易於維護及閱讀</p>
+					</section>
+					<section>
+						<h2>範例</h2>
+						<img src="./images/scss-1.jpg">
+						<p>&表示自己 (此處表示button)</p>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h1>變數</h1>
+						<ul>
+							<li>一致性</li>
+							<li>可讀性</li>
+						</ul>
+					</section>
+					<section>
+						<h2>範例</h2>
+						<img src="./images/scss-2.jpg">
+					</section>
+					<section>
+						<h2>集中管理</h2>
+						<p>今天紅色要由 #f00 改為 #f66</p>
+						<p>只要修正變數就可以了</p>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h1>繼承</h1>
+						<p>若有大部分程式碼相同則可使用繼承</p>
+						<p>繼承重複區塊</p>
+						<p>剩下只要擴充即可</p>
+					</section>
+					<section>
+						<h2>範例</h2>
+						<img src="./images/scss-3.jpg">
+						<p>使用@extend繼承</p>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>函式</h2>
+						<ul>
+							<li>如同function</li>
+							<li>可帶參數</li>
+						</ul>
+					</section>
+					<section>
+						<h2>使用方式</h2>
+						<ul>
+							<li>@mixin 宣告</li>
+							<li>@include 使用</li>
+						</ul>
+					</section>
+					<section>
+						<h2>範例1</h2>
+						<img src="./images/scss-4.jpg">
+						<p>最基礎的函式使用</p>
+					</section>
+					<section>
+						<h2>範例2</h2>
+						<img src="./images/scss-5.jpg">
+						<p>帶入參數</p>
+					</section>
+					<section>
+						<h2>範例3</h2>
+						<img src="./images/scss-6.jpg">
+						<p>參數設定預設值</p>
+					</section>
+					<section>
+						<h2>範例4</h2>
+						<img src="./images/scss-7.jpg">
+						<p>有預設值也可傳入值</p>
+						<p>這裡會得到50%</p>
+					</section>
+					
+				</section>
+				<section>
+					<section>
+						<h1>其他常用功能</h1>
+					</section>
+					<section>
+						<h2>1.import</h2>
+						<img src="./images/scss-8.jpg">
+						<p>compass有許多mixin可以使用 但記得多打/css3</p>
+						<p>共用參數可以獨立出_config.scss的檔案方便使用</p>
+					</section>
+					<section>
+						<h2>2.計算</h2>
+						<img src="./images/scss-9.jpg">
+					</section>
+					<section>
+						<p>其他如迴圈有需要的話在看文件</p>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						END.
+					</section>
+				</section>
+
+
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
