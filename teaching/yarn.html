@@ -1,0 +1,107 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>yarn教學</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css">
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<section>
+						<h1>yarn</h1>
+						<p><a href="./npm.html">需熟悉npm</a></p>
+					</section>
+					<section>
+						<h2>什麼是yarn</h2>
+						<p>類似npm</p>
+						<p>為了改善npm而產生的</p>
+						<p>
+							<a href="http://www.techbang.com/posts/46810-faster-than-the-npm-facebook-open-source-javascript-package-management-tools-yarn">
+								參考連結:比NPM更快！Facebook開源JavaScript套件管理工具YARN
+							</a>
+						</p>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>yarn懶人包</h2>
+						<ul>
+							<li>解決npm速度慢而產生</li>
+							<li>並非取代npm</li>
+							<li>依然拉取https://www.npmjs.com上的package</li>
+							<li>預設產生.lock (npm5.0後預設也是會產生了)</li>
+							<li>並行安裝</li>
+							<li>離線安裝</li>
+						</ul>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>CLI差異</h2>
+						<table>
+							<tr>
+								<th></th>
+								<th>npm</th>
+								<th>yarn</th>
+							</tr>
+							<tr>
+								<td>全域</td>
+								<td>-g / --global</td>
+								<td>global</td>
+							</tr>
+							<tr>
+								<td>install</td>
+								<td>package.json</td>
+								<td>yarn.lock</td>
+							</tr>
+							<tr>
+								<td>update</td>
+								<td>npm update</td>
+								<td>yarn upgrade</td>
+							</tr>
+							<tr>
+								<td>add [-dev]</td>
+								<td>--save-dev</td>
+								<td>-dev</td>
+							</tr>
+						</table>
+						
+					</section>
+				</section>
+
+				<section>
+					<section>
+						END.
+					</section>
+				</section>
+
+
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
