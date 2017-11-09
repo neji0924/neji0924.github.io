@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-TW">
 <head>
     <meta charset="utf-8">
     <title>Neji's Resume</title>
@@ -13,71 +13,30 @@
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
-    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
     <link rel="stylesheet" type="text/css" href="./public/css/app.css">
-
 </head>
-<body style="background:#efefe9;">
-    <section>
-        <div class="container">
-            <div class="row">
-                <div class="board">
-                    <div class="board-inner">
-                        <ul class="nav nav-tabs" id="myTab">
-                            <div class="liner"></div>
+<body class="animated fadeIn">
+    <ul id="menu">
+        <li data-menuanchor="first"><a href="#first">home</a></li>
+        <li data-menuanchor="second"><a href="#second">profile</a></li>
+        <li data-menuanchor="third"><a href="#third">skills</a></li>
+        <li data-menuanchor="fourth"><a href="#fourth">projects</a></li>
+    </ul>
 
-                            <li class="active">
-                                <a href="#home" data-toggle="tab" title="Home">
-                                    <span class="round-tabs one">
-                                        <i class="glyphicon glyphicon-home"></i>
-                                    </span> 
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="#profile" data-toggle="tab" title="About Me">
-                                    <span class="round-tabs two">
-                                        <i class="glyphicon glyphicon-user"></i>
-                                    </span> 
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="#skills" data-toggle="tab" title="Skills">
-                                    <span class="round-tabs three">
-                                        <i class="glyphicon glyphicon-tasks"></i>
-                                    </span>
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="https://neji0924.github.io/windows"  title="Projects">
-                                    <span class="round-tabs five">
-                                        <i class="glyphicon glyphicon-off"></i>
-                                    </span> 
-                                </a>
-                            </li>
-
-
-                        </ul>
-                    </div>
-
-                    <div class="tab-content">
-                        <div class="tab-pane fade in active" id="home">
-                            <h3 class="head text-center">多花幾小時的規劃，可以減少幾個禮拜的撰寫</h3>
-                            <p class="narrow text-center">
-                                目標不是成為偉大的程式設計師，而是習慣良好的程式設計師
-                            </p>
-
-                        </div>
-
-                        <div class="tab-pane fade" id="profile">
-                            <h3 class="head text-center">About Me</h3>
-                            <div class="col-sm-3 text-center">
-                                <img class="user-img" src="./public/images/me.jpg">
-                            </div>
-                            <div class="col-sm-9 text-left">
+    <div id="fullpage">
+        <div class="section animated" id="home">
+            <div class="animated fadeInUp">
+                <p>多花幾小時的規劃</p>
+                <p>可以減少幾個禮拜的撰寫</p>
+            </div>
+        </div>
+        <div class="section animate" id="profile">
+            <div class="col-sm-3 text-center">
+                <img class="user-img" data-src="./public/images/me.jpg">
+            </div>
+            <div class="col-sm-9 text-left">
 <pre>
     {
         "name": "陳世鵬",
@@ -91,90 +50,107 @@
         ]
     }
 </pre> 
-                            </div> 
+            </div>
+        </div>
+        <div class="section animated" id="skills">
+            <div class="slide" id="skills-1">
+                <div class="col-sm-offset-4 col-sm-4 text-center">
+                    <div class="panel panel-info panel-pricing">
+                        <div class="panel-heading">
+                            <h3>後端</h3>
                         </div>
-
-                        <div class="tab-pane fade" id="skills">
-                            <p class="narrow text-center">
-                                <!-- item -->
-                                <div class="col-sm-3 text-center">
-                                    <div class="panel panel-danger panel-pricing">
-                                        <div class="panel-heading">
-                                            <h3>前端</h3>
-                                        </div>
-                                      
-                                        <ul class="list-group text-center">
-                                            <li class="list-group-item"> JQuery</li>
-                                            <li class="list-group-item"> Bootstrap</li>
-                                            <li class="list-group-item"> RWD</li>
-                                            <li class="list-group-item"> HTML5</li>
-                                            <li class="list-group-item"> CSS/SCSS</li>
-                                        </ul>
-                                       
-                                    </div>
-                                </div>
-                                <!-- /item -->
-
-                                <!-- item -->
-                                <div class="col-sm-3 text-center">
-                                    <div class="panel panel-info panel-pricing">
-                                        <div class="panel-heading">
-                                            <h3>後端</h3>
-                                        </div>
-                                        <ul class="list-group text-center">
-                                            <li class="list-group-item"> PHP</li>
-                                            <li class="list-group-item"> Laravel</li>
-                                        </ul>
-                                        
-                                    </div>
-                                </div>
-                                <!-- /item -->
-
-                                <!-- item -->
-                                <div class="col-sm-3 text-center">
-                                    <div class="panel panel-warning panel-pricing">
-                                        <div class="panel-heading">
-                                            <h3>資料庫</h3>
-                                        </div>
-                                        
-                                        <ul class="list-group text-center">
-                                            <li class="list-group-item"> MySQL</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <!-- /item -->
-
-                                <!-- item -->
-                                <div class="col-sm-3 text-center">
-                                    <div class="panel panel-success panel-pricing">
-                                        <div class="panel-heading">
-                                            <h3>工具</h3>
-                                        </div>
-                                        
-                                        <ul class="list-group text-center">
-                                            <li class="list-group-item"> Git</li>
-                                            <li class="list-group-item"> Gulp</li>
-                                            <li class="list-group-item"> NPM</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <!-- /item -->
-                            </p>
+                        <ul class="list-group text-center">
+                            <li class="list-group-item"> PHP</li>
+                            <li class="list-group-item"> Laravel</li>
+                        </ul>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="slide" id="slide3-2">
+                <div class="col-sm-offset-4 col-sm-4 text-center">
+                    <div class="panel panel-danger panel-pricing">
+                        <div class="panel-heading">
+                            <h3>前端</h3>
                         </div>
-
-                        <div class="clearfix"></div>
+                        <ul class="list-group text-center">
+                            <li class="list-group-item"> JQuery</li>
+                            <li class="list-group-item"> Bootstrap</li>
+                            <li class="list-group-item"> RWD</li>
+                            <li class="list-group-item"> HTML5</li>
+                            <li class="list-group-item"> CSS/SCSS</li>
+                        </ul>
+                       
+                    </div>
+                </div>
+            </div>
+            <div class="slide" id="slide3-3">
+                <div class="col-sm-offset-4 col-sm-4 text-center">
+                    <div class="panel panel-warning panel-pricing">
+                        <div class="panel-heading">
+                            <h3>資料庫</h3>
+                        </div>
+                        
+                        <ul class="list-group text-center">
+                            <li class="list-group-item"> MySQL</li>
+                            <li class="list-group-item"> ERD</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="slide" id="slide3-4">
+                <div class="col-sm-offset-4 col-sm-4 text-center">
+                    <div class="panel panel-success panel-pricing">
+                        <div class="panel-heading">
+                            <h3>工具</h3>
+                        </div>
+                        
+                        <ul class="list-group text-center">
+                            <li class="list-group-item"> Git</li>
+                            <li class="list-group-item"> Gulp</li>
+                            <li class="list-group-item"> NPM / YARN</li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
-           
+        <div class="section animated" id="projects">
+            <p class="text-center animated"><a href="./windows/index.html">read</a></p>
+        </div>
+    </div>
+
+
+    <!-- script -->
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="./public/js/app.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
     <script type="text/javascript">
+        var fullpageClass = {
+            init: function() {
+                $('#fullpage').fullpage({
+                    anchors: ['first', 'second', 'third', 'fourth'],
+                    menu: '#menu',
+                    onLeave: function(index, nextIndex, direction) {
+                        $(this).addClass('fadeOut').removeClass('fadeIn');
+                        $('.fp-section').eq(nextIndex - 1).removeClass('fadeOut').addClass('fadeIn');
+                        if (nextIndex == 1) {
+                            $('.fp-section').eq(0).find('div').addClass('fadeInUp');
+                        } else {
+                            $('.fp-section').eq(0).find('div').removeClass('fadeInUp');
+                        }
+
+                        if (nextIndex == 4) {
+                            $('.fp-section').eq(3).find('p').addClass('zoomIn').css('animation-delay', '.5s');
+                        } else {
+                            $('.fp-section').eq(3).find('p').removeClass('zoomIn');
+                        }
+                    }
+                });
+            }
+        }
+
         $(function(){
-            $('a[title]').tooltip();
-            $('.carousel').carousel({
-                interval: 6000
-            })
+            fullpageClass.init();
         });
     </script>
 </body>

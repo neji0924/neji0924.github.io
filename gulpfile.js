@@ -22,15 +22,19 @@ elixir((mix) => {
     mix.sass('desktop.scss');
     mix.sass('practice.scss', './practice/css/practice.css');
 
+    mix.styles([
+        './node_modules/fullpage.js/dist/jquery.fullpage.min.css',
+        './public/css/app.css',
+    ], './public/css/app.css');
+
 
     mix.scripts([
         './node_modules/jquery/dist/jquery.min.js',
         './node_modules/jquery-ui-dist/jquery-ui.min.js',
         './node_modules/bootstrap-sass/assets/javascripts/bootstrap.js',
+        './node_modules/fullpage.js/dist/jquery.fullpage.min.js',
         'app.js'
     ], 'public/js/app.js');
 
     mix.copy('./public/js/app.js', './practice/js/app.js');
-    mix.copy('./node_modules/font-awesome/fonts', './practice/fonts');
-    mix.copy('./node_modules/bootstrap-sass/assets/fonts/bootstrap', './practice/fonts/bootstrap');
 });
