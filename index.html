@@ -143,7 +143,9 @@
                         $(this).addClass('fadeOut').removeClass('fadeIn');
                         $('.fp-section').eq(nextIndex - 1).removeClass('fadeOut').addClass('fadeIn');
                         if (nextIndex == 1) {
-                            $('.fp-section').eq(0).find('div').addClass('fadeInUp');
+                            $('.fp-section').eq(0).find('div')
+                                .addClass('fadeInUp')
+                                .css('animation-delay', '.3s');
                         } else {
                             $('.fp-section').eq(0).find('div').removeClass('fadeInUp');
                         }
