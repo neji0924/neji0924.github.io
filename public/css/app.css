@@ -95,96 +95,25 @@
 }
 
 #fullpage #profile .fp-tableCell {
-  background-image: url("../../public/images/img1.jpg");
-  background-size: cover;
-  background-position: center 80%;
-}
-
-#fullpage #skills .fp-tableCell {
   background-image: url("../../public/images/img4.jpg");
   background-size: cover;
   background-position: center 80%;
 }
 
-#fullpage #projects .fp-tableCell {
-  background-image: url("../../practice/images/banner2.jpeg");
+#fullpage #skills .fp-tableCell {
+  background-color: #000;
   background-size: cover;
   background-position: center 80%;
 }
 
-/* ------------------------------- *
- *             loading             *
- * ------------------------------- */
-#loading {
-  background-color: #fff;
-  display: block;
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: 9999;
+#fullpage #projects .fp-tableCell {
+  background-color: #000;
+  background-size: cover;
+  background-position: center 80%;
 }
 
-#loading > #loader {
-  position: absolute;
-  top: 50%;
-  margin-top: -75px;
-  width: 100%;
-  text-align: center;
-  text-transform: uppercase;
-  font-family: 'Nunito', sans-serif;
-  font-size: 4.6875em;
-  color: transparent;
-  letter-spacing: 0.01em;
-}
-
-#loading > #loader > span {
-  text-shadow: 0 0 2px rgba(204, 208, 212, 0.9), 0 15px 25px rgba(0, 0, 0, 0.3), 0 -2px 3px rgba(0, 0, 0, 0.1), 0 -5px 10px rgba(255, 255, 255, 0.5), 0 5px 10px rgba(0, 0, 0, 0.3), 0 3px 4px rgba(255, 255, 255, 0.2), 0 0 20px rgba(255, 255, 255, 0.45);
-  -webkit-animation: loading 0.85s ease-in-out infinite alternate;
-  animation: loading 0.85s ease-in-out infinite alternate;
-}
-
-#loading > #loader > span:nth-child(2) {
-  -webkit-animation-delay: .1s;
-  animation-delay: .1s;
-}
-
-#loading > #loader > span:nth-child(3) {
-  -webkit-animation-delay: .2s;
-  animation-delay: .2s;
-}
-
-#loading > #loader > span:nth-child(4) {
-  -webkit-animation-delay: .3s;
-  animation-delay: .3s;
-}
-
-#loading > #loader > span:nth-child(5) {
-  -webkit-animation-delay: .4s;
-  animation-delay: .4s;
-}
-
-#loading > #loader > span:nth-child(6) {
-  -webkit-animation-delay: .5s;
-  animation-delay: .5s;
-}
-
-#loading > #loader > span:nth-child(7) {
-  -webkit-animation-delay: .6s;
-  animation-delay: .6s;
-}
-
-@-webkit-keyframes loading {
-  to {
-    text-shadow: 0 0 2px rgba(204, 208, 212, 0.2), 0 0 3px rgba(0, 0, 0, 0.02), 0 0 0 transparent, 0 0 0 rgba(255, 255, 255, 0), 0 0 0 transparent, 0 0 0 rgba(255, 255, 255, 0), 0 0 0 rgba(255, 255, 255, 0);
-  }
-}
-
-@keyframes loading {
-  to {
-    text-shadow: 0 0 2px rgba(204, 208, 212, 0.2), 0 0 3px rgba(0, 0, 0, 0.02), 0 0 0 transparent, 0 0 0 rgba(255, 255, 255, 0), 0 0 0 transparent, 0 0 0 rgba(255, 255, 255, 0), 0 0 0 rgba(255, 255, 255, 0);
-  }
+#fullpage #projects .fp-tableCell p:hover {
+  text-shadow: 0 0 20px rgba(204, 208, 212, 0.9), 0 15px 25px rgba(0, 0, 0, 0.3), 0 -20px 3px rgba(0, 0, 0, 0.1), 0 -5px 10px rgba(255, 255, 255, 0.5), 0 50px 10px rgba(0, 0, 0, 0.3), 0 3px 4px rgba(255, 255, 255, 0.2), 0 0 20px rgba(255, 255, 255, 0.45);
 }
 
 /*# sourceMappingURL=app.css.map */

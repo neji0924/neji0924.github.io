@@ -2,6 +2,7 @@
 <html lang="zh-TW">
 <head>
     <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script src="./public/js/loadCSS.js"></script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-109448670-1"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -19,12 +20,104 @@
     <meta property="og:title" content="Neji's Resume">
     <meta property="og:description" content="Hi, 我是世鵬">
     <meta property="og:image" content="http://neji0924.github.io/public/images/me.jpg">
+    <script type="text/javascript">
+        loadCSS("https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css");
+        loadCSS("https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css");
+        loadCSS("https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css");
+        loadCSS("./public/css/app.css");
+    </script>
+    <style type="text/css">
+#loading {
+    background-color: #fff;
+    display: block;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+}
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
-    <link rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
-    <link rel="stylesheet" type="text/css" href="./public/css/app.css">
+#loading > #loader {
+    position: absolute;
+    top: 50%;
+    margin-top: -75px;
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Nunito', sans-serif;
+    font-size: 4.6875em;
+    color: transparent;
+    letter-spacing: 0.01em;
+}
+
+#loading > #loader > span {
+  text-shadow: 0 0 2px rgba(204, 208, 212, 0.9),
+               0 15px 25px rgba(0, 0, 0, 0.3),
+               0 -2px 3px rgba(0, 0, 0, 0.1),
+               0 -5px 10px rgba(255, 255, 255, 0.5),
+               0 5px 10px rgba(0, 0, 0, 0.3),
+               0 3px 4px rgba(255, 255, 255, 0.2),
+               0 0 20px rgba(255, 255, 255, 0.45);
+    -webkit-animation: loading 0.85s ease-in-out infinite alternate;
+    animation: loading 0.85s ease-in-out infinite alternate;
+}
+
+#loading > #loader > span:nth-child(2) {
+    -webkit-animation-delay: .1s;
+    animation-delay: .1s;
+}
+
+#loading > #loader > span:nth-child(3) {
+    -webkit-animation-delay: .2s;
+    animation-delay: .2s;
+}
+
+#loading > #loader > span:nth-child(4) {
+    -webkit-animation-delay: .3s;
+    animation-delay: .3s;
+}
+
+#loading > #loader > span:nth-child(5) {
+    -webkit-animation-delay: .4s;
+    animation-delay: .4s;
+}
+
+#loading > #loader > span:nth-child(6) {
+    -webkit-animation-delay: .5s;
+    animation-delay: .5s;
+}
+
+#loading > #loader > span:nth-child(7) {
+    -webkit-animation-delay: .6s;
+    animation-delay: .6s;
+}
+
+@-webkit-keyframes loading {
+    to {
+        text-shadow: 0 0 2px rgba(204, 208, 212, 0.2),
+                     0 0 3px rgba(0, 0, 0, 0.02),
+                     0 0 0 transparent,
+                     0 0 0 rgba(255, 255, 255, 0),
+                     0 0 0 transparent,
+                     0 0 0 rgba(255, 255, 255, 0),
+                     0 0 0 rgba(255, 255, 255, 0);
+    }
+}
+
+@keyframes loading {
+    to {
+        text-shadow: 0 0 2px rgba(204, 208, 212, 0.2),
+                     0 0 3px rgba(0, 0, 0, 0.02),
+                     0 0 0 transparent,
+                     0 0 0 rgba(255, 255, 255, 0),
+                     0 0 0 transparent,
+                     0 0 0 rgba(255, 255, 255, 0),
+                     0 0 0 rgba(255, 255, 255, 0);
+    }
+}
+
+    </style>
 </head>
 <body class="animated fadeIn">
     <div id="loading">
@@ -133,9 +226,9 @@
 
 
     <!-- script -->
-    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
-    <script src="./public/js/app.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+    <script async src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script async src="./public/js/app.js"></script>
+    <script async src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
     <script type="text/javascript">
         var fullpageClass = {
             init: function() {
