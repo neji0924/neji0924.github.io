@@ -2469,4 +2469,64 @@ $("#loading button").click(function() {
 	setTimeout(function() {$("#loading .loading").hide(); }, 2000)
 });
 
+
+/////////////////////////////////////////////////////
+var fullpageClass = {
+    init: function() {
+        this.setAnimationDelay();
+        $('#fullpage').fullpage({
+            anchors: ['first', 'second', 'third', 'fourth'],
+            menu: '#menu',
+            onLeave: function(index, nextIndex, direction) {
+                $(this).addClass('fadeOut').removeClass('fadeIn');
+                $('.fp-section').eq(nextIndex - 1).removeClass('fadeOut').addClass('fadeIn');
+
+                switch (index)
+                {
+                    case 1 :
+                        $('.fp-section').eq(0).find('div').removeClass('fadeInUp');
+                        break;
+                    case 2 :
+                        break;
+                    case 3 :
+                        $('#skills').find('div').removeClass('fadeInUp');
+                        break;
+                    case 4 :
+                        $('.fp-section').eq(3).find('p').removeClass('zoomIn');
+                        break;
+                }
+
+                switch (nextIndex)
+                {
+                    case 1 :
+                        $('.fp-section').eq(0).find('div')
+                            .addClass('fadeInUp')
+                            .css('animation-delay', '.3s');
+                        break;
+                    case 2 :
+                        break;
+                    case 3 :
+                        $('#skills > div > div').addClass('fadeInUp');
+                        break;
+                    case 4 :
+                        $('.fp-section').eq(3).find('p').addClass('zoomIn');
+                        break;
+                }
+            }
+        });
+    },
+    setAnimationDelay: function() {
+        $('#skills > div').eq(0).css('animation-delay', '.3s');
+        $('#skills > div').eq(1).css('animation-delay', '.5s');
+        $('#skills > div').eq(2).css('animation-delay', '.6s');
+        $('#skills > div').eq(3).css('animation-delay', '.7s');
+        $('#projects > p').css('animation-delay', '.5s');
+    }
+}
+
+$(function(){
+    fullpageClass.init();
+    $("#loading").hide();
+});
+
 //# sourceMappingURL=app.js.map

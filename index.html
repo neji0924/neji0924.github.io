@@ -94,7 +94,7 @@
 }
 
 @-webkit-keyframes loading {
-    to {
+  to {
         text-shadow: 0 0 2px rgba(204, 208, 212, 0.2),
                      0 0 3px rgba(0, 0, 0, 0.02),
                      0 0 0 transparent,
@@ -227,66 +227,8 @@
 
     <!-- script -->
     <script async src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
-    <script async src="./public/js/app.js"></script>
     <script async src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
-    <script type="text/javascript">
-        var fullpageClass = {
-            init: function() {
-                this.setAnimationDelay();
-                $('#fullpage').fullpage({
-                    anchors: ['first', 'second', 'third', 'fourth'],
-                    menu: '#menu',
-                    onLeave: function(index, nextIndex, direction) {
-                        $(this).addClass('fadeOut').removeClass('fadeIn');
-                        $('.fp-section').eq(nextIndex - 1).removeClass('fadeOut').addClass('fadeIn');
+    <script async src="./public/js/app.js"></script>
 
-                        switch (index)
-                        {
-                            case 1 :
-                                $('.fp-section').eq(0).find('div').removeClass('fadeInUp');
-                                break;
-                            case 2 :
-                                break;
-                            case 3 :
-                                $('#skills').find('div').removeClass('fadeInUp');
-                                break;
-                            case 4 :
-                                $('.fp-section').eq(3).find('p').removeClass('zoomIn');
-                                break;
-                        }
-
-                        switch (nextIndex)
-                        {
-                            case 1 :
-                                $('.fp-section').eq(0).find('div')
-                                    .addClass('fadeInUp')
-                                    .css('animation-delay', '.3s');
-                                break;
-                            case 2 :
-                                break;
-                            case 3 :
-                                $('#skills > div > div').addClass('fadeInUp');
-                                break;
-                            case 4 :
-                                $('.fp-section').eq(3).find('p').addClass('zoomIn');
-                                break;
-                        }
-                    }
-                });
-            },
-            setAnimationDelay: function() {
-                $('#skills > div').eq(0).css('animation-delay', '.3s');
-                $('#skills > div').eq(1).css('animation-delay', '.5s');
-                $('#skills > div').eq(2).css('animation-delay', '.6s');
-                $('#skills > div').eq(3).css('animation-delay', '.7s');
-                $('#projects > p').css('animation-delay', '.5s');
-            }
-        }
-
-        $(function(){
-            fullpageClass.init();
-            $("#loading").hide();
-        });
-    </script>
 </body>
 </html>
