@@ -15,7 +15,8 @@ var elixir = require('laravel-elixir');
 
 elixir((mix) => {
     mix.copy('./node_modules/font-awesome/fonts', 'public/fonts');
-	mix.copy('./node_modules/bootstrap-sass/assets/fonts/bootstrap', 'public/fonts/bootstrap');
+    mix.copy('./node_modules/bootstrap-sass/assets/fonts/bootstrap', 'public/fonts/bootstrap');
+	mix.copy('./node_modules/fg-loadcss/src/loadCSS.js', 'public/js/loadCSS.js');
 	
     mix.sass('app.scss');
     mix.sass('windows.scss');

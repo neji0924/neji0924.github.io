@@ -1201,6 +1201,10 @@ fastparse@^1.1.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/fastparse/-/fastparse-1.1.1.tgz#d1e2643b38a94d7583b479060e6c4affc94071f8"
 
+fg-loadcss@^2.0.0-3:
+  version "2.0.0-3"
+  resolved "https://registry.yarnpkg.com/fg-loadcss/-/fg-loadcss-2.0.0-3.tgz#49186f0dfdd589d94efb10f42b5dfc92177a0e17"
+
 file-loader@^0.9.0:
   version "0.9.0"
   resolved "https://registry.yarnpkg.com/file-loader/-/file-loader-0.9.0.tgz#1d2daddd424ce6d1b07cfe3f79731bed3617ab42"
@@ -1338,6 +1342,12 @@ fstream@^1.0.0, fstream@^1.0.10, fstream@^1.0.2:
     inherits "~2.0.0"
     mkdirp ">=0.5 0"
     rimraf "2"
+
+fullpage.js@^2.9.5:
+  version "2.9.5"
+  resolved "https://registry.yarnpkg.com/fullpage.js/-/fullpage.js-2.9.5.tgz#420e149b87253ec6810319d1421975ea88b5dc00"
+  dependencies:
+    jquery ">=1.6.0"
 
 function-bind@^1.0.2:
   version "1.1.1"
@@ -2110,7 +2120,7 @@ jquery-ui-dist@^1.12.1:
   version "1.12.1"
   resolved "https://registry.yarnpkg.com/jquery-ui-dist/-/jquery-ui-dist-1.12.1.tgz#5c0815d3cc6f90ff5faaf5b268a6e23b4ca904fa"
 
-jquery@^3.1.0:
+jquery@>=1.6.0, jquery@^3.1.0:
   version "3.2.1"
   resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.2.1.tgz#5c4d9de652af6cd0a770154a631bba12b015c787"
 

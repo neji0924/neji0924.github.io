@@ -17,6 +17,7 @@
     "vue": "^2.3.4"
   },
   "dependencies": {
+    "fg-loadcss": "^2.0.0-3",
     "fullpage.js": "^2.9.5"
   }
 }
