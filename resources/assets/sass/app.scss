@@ -80,17 +80,17 @@
         }
     }
     #profile .fp-tableCell{
-        background-image: url('../../public/images/img4.jpg');
+        background-image: url('../../public/images/img3.jpg');
         background-size: cover;
         background-position: center 80%;
     }
     #skills .fp-tableCell{
-        background-color: #000;
+        background-image: url('../../public/images/img4.jpg');
         background-size: cover;
         background-position: center 80%;
     }
     #projects .fp-tableCell{
-        background-color: #000;
+        background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAADCAYAAABfwxXFAAAAV0lEQVQYVyXJsQpAUBSA4f+UlI6y3MFo8gqMmN3np9hllZSc6xp86yddM0YAM+MJhmYZ8ry8Ikjf+mghkKviSscyzeSp/jk0PgYztFBqV7GtO6dcHMnNB1ZfH0iyP3hVAAAAAElFTkSuQmCC");
         background-size: cover;
         background-position: center 80%;
         & p:hover {
@@ -99,7 +99,7 @@
                 0 15px 25px rgba(0, 0, 0, 0.3),
                 0 -20px 3px rgba(0, 0, 0, 0.1),
                 0 -5px 10px rgba(255, 255, 255, 0.5),
-                0 50px 10px rgba(0, 0, 0, 0.3),
+                0 5px 10px rgba(0, 0, 0, 0.3),
                 0 3px 4px rgba(255, 255, 255, 0.2),
                 0 0 20px rgba(255, 255, 255, 0.45);
         }
