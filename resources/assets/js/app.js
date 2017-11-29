@@ -81,6 +81,8 @@ var fullpageClass = {
                         $('.fp-section').eq(0).find('div').removeClass('fadeInUp');
                         break;
                     case 2 :
+                        $('#profile pre').removeClass('rollIn');
+                        $('#profile img').removeClass('pulse');
                         break;
                     case 3 :
                         $('#skills').find('div').removeClass('fadeInUp');
@@ -98,6 +100,8 @@ var fullpageClass = {
                             .css('animation-delay', '.3s');
                         break;
                     case 2 :
+                        $('#profile pre').addClass('rollIn');
+                        $('#profile img').addClass('pulse');
                         break;
                     case 3 :
                         $('#skills > div > div').addClass('fadeInUp');
