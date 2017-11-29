@@ -25,7 +25,7 @@ elixir((mix) => {
 
     mix.styles([
         './node_modules/fullpage.js/dist/jquery.fullpage.min.css',
-        './public/css/app.css',
+        './public/css/app.css'
     ], './public/css/app.css');
 
 

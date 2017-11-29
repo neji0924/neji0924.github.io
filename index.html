@@ -24,8 +24,6 @@
          *             loadCSS             *
          * ------------------------------- */
         function loadCSS(href){var ss = window.document.createElement('link'),ref =window.document.getElementsByTagName('head')[0];ss.rel = 'stylesheet';ss.href = href;ss.media = 'only x';ref.parentNode.insertBefore(ss,ref);setTimeout( function(){ss.media = 'all';}, 0);}
-        loadCSS("https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css");
-        loadCSS("https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css");
         loadCSS("https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css");
         loadCSS("./public/css/app.css");
     </script>
@@ -144,8 +142,6 @@
 
 
     <!-- script -->
-    <script async src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
-    <script async src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
     <script async src="./public/js/app.js"></script>
 
 </body>
