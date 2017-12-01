@@ -75,25 +75,21 @@
     #home {
         text-align: center;
         .fp-tableCell {
-            background-image: url('../../public/images/img2.jpg');
+            background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAADCAYAAABfwxXFAAAAYklEQVQYVwFXAKj/AZ6BfP/a9OQA4/DeADAZGwDY4AUA9vz9AAMC9AABo4h//9Xq4AARHBIA08DZAOLm+QAPHAYALjQaAAGqkIn/y9PWABMoHADO0N8A6tvjAAkQBgASIAQA9lUkctaqiwEAAAAASUVORK5CYII=');
             background-size: cover;
-            background-position: center 80%;
         }
     }
     #profile .fp-tableCell{
-        background-image: url('../../public/images/img3.jpg');
+        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAADCAYAAABfwxXFAAAAYklEQVQYVwFXAKj/AWypp//dyccAHRsXADEiKwAB7vQA1NLXAOzo4wABW3mG/yEsIwDd4OYACvL4ABYQ/gAJCggA4OXwAAFhdIX/x7m/ACUfFgD1+e0AOzcsACspKwDXAPUAVPYjGsqv2eIAAAAASUVORK5CYII=');
         background-size: cover;
-        background-position: center 80%;
     }
     #skills .fp-tableCell{
-        background-image: url('../../public/images/img4.jpg');
+        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAADCAYAAABfwxXFAAAAYklEQVQYVwFXAKj/AVHTfP/w7vgA4eYDACUIFgAJ3fUA6NbwAOoP6QABD6BK/xn+IQAT/RgAAO/tAAjm/gD55f8A3yToAAE3lHj/7+34ACANCwAuER0A7uTuAObi4QAhPxwA3WomaKmRROEAAAAASUVORK5CYII=');
         background-size: cover;
-        background-position: center 80%;
     }
     #projects .fp-tableCell{
         background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAADCAYAAABfwxXFAAAAV0lEQVQYVyXJsQpAUBSA4f+UlI6y3MFo8gqMmN3np9hllZSc6xp86yddM0YAM+MJhmYZ8ry8Ikjf+mghkKviSscyzeSp/jk0PgYztFBqV7GtO6dcHMnNB1ZfH0iyP3hVAAAAAElFTkSuQmCC");
         background-size: cover;
-        background-position: center 80%;
         & p:hover {
             text-shadow:
                 0 0 20px rgba(204, 208, 212,0.9),
