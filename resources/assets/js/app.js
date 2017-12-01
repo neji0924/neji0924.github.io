@@ -72,9 +72,6 @@ var fullpageClass = {
             anchors: ['first', 'second', 'third', 'fourth'],
             menu: '#menu',
             onLeave: function(index, nextIndex, direction) {
-                $(this).addClass('fadeOut').removeClass('fadeIn');
-                $('.fp-section').eq(nextIndex - 1).removeClass('fadeOut').addClass('fadeIn');
-
                 switch (index)
                 {
                     case 1 :
