@@ -52,6 +52,27 @@
     }
 }
 
+/* ------------------------------- *
+ *         ConnectMenu             *
+ * ------------------------------- */
+ 
+#connect-menu {
+    a {
+        text-decoration: none;
+        color: #000;
+        transition: font-size .3s;
+        &:hover {
+            color: #aaa;
+            font-size: 1.5rem;
+        }
+    }
+}
+
+
+/* ------------------------------- *
+ *            fullpage             *
+ * ------------------------------- */
+
 #fullpage {
     p {
         font-family: 'Roboto Condensed', sans-serif;
