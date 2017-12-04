@@ -80,6 +80,7 @@ var fullpageClass = {
                     case 2 :
                         $('#profile pre').removeClass('rollIn');
                         $('#profile img').removeClass('pulse');
+                        $('#profile #connect-menu').removeClass('flash');
                         break;
                     case 3 :
                         $('#skills').find('div').removeClass('fadeInUp');
@@ -99,6 +100,8 @@ var fullpageClass = {
                     case 2 :
                         $('#profile pre').addClass('rollIn');
                         $('#profile img').addClass('pulse');
+                        $('#profile #connect-menu').addClass('flash')
+                                                .css('animation-delay', '.3s');
                         break;
                     case 3 :
                         $('#skills > div > div').addClass('fadeInUp');
