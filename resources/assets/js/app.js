@@ -78,7 +78,7 @@ var fullpageClass = {
                         $('.fp-section').eq(0).find('div').removeClass('fadeInUp');
                         break;
                     case 2 :
-                        $('#profile pre').removeClass('rollIn');
+                        $('#profile pre').removeClass('flash');
                         $('#profile img').removeClass('pulse');
                         $('#profile #connect-menu').removeClass('flash');
                         break;
@@ -98,10 +98,9 @@ var fullpageClass = {
                             .css('animation-delay', '.3s');
                         break;
                     case 2 :
-                        $('#profile pre').addClass('rollIn');
+                        $('#profile pre').addClass('flash');
                         $('#profile img').addClass('pulse');
-                        $('#profile #connect-menu').addClass('flash')
-                                                .css('animation-delay', '.3s');
+                        $('#profile #connect-menu').addClass('flash');
                         break;
                     case 3 :
                         $('#skills > div > div').addClass('fadeInUp');
